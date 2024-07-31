@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Tennis Scoreboard</string>
+    <string name="settings">Configuració</string>
+    <string name="back">Torna enrere</string>
+    <string name="select_language">Seleccionar Idioma</string>
+    <string name="end_match">Finalitzar Partit</string>
+    <string name="pausar_match">Pausar Partir</string>
+    <string name="reanudar_match">Reanudar Partit</string>
+    <string name="dark_mode">Mode Nit</string>
+    <string name="log">Registre de Partits</string>
+    <string name="new_game">Nou partit</string>
+    <string name="player1">Jugador 1</string>
+    <string name="player2">Jugador 2</string>
+    <string name="team1">Equip 1</string>
+    <string name="team2">Equip 2</string>
+    <string name="name1">Nom del Jugador 1</string>
+    <string name="name2">Nom del Jugador 2</string>
+    <string name="teamname1">Nom de l\'Equip 1</string>
+    <string name="teamname2">Nom de l\'Equip 2</string>
+    <string name="start_game">Començar Partit</string>
+    <string name="main_menu">Torna al Menú Principal</string>
+    <string name="fin_partido">FI DEL PARTIT</string>
+    <string name="congrats">ENHORABONA!</string>
+    <string name="empate">El resultat ha acabat en empat</string>
+    <string name="ganador">El guanyador és</string>
+    <string name="ventaja">AVENTATGE</string>
+    <string name="cambio">Canvi de camp</string>
+    <!-- Agrega más cadenas según sea necesario -->
+</resources>

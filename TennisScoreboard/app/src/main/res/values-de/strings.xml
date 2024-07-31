@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Tennis-Anzeigetafel</string>
+    <string name="settings">Konfiguration</string>
+    <string name="back">Geh Zurück</string>
+    <string name="select_language">Sprache Auswählen</string>
+    <string name="end_match">Spiel Beenden</string>
+    <string name="pausar_match">Spiel Pausieren</string>
+    <string name="reanudar_match">Spiel Fortsetzen</string>
+    <string name="dark_mode">Dunkelmodus</string>
+    <string name="log">Spielprotokoll</string>
+    <string name="new_game">Neues Spiel</string>
+    <string name="player1">Spieler 1</string>
+    <string name="player2">Spieler 2</string>
+    <string name="team1">Team 1</string>
+    <string name="team2">Team 2</string>
+    <string name="name1">Name des Spielers 1</string>
+    <string name="name2">Name des Spielers 2</string>
+    <string name="teamname1">Name des Teams 1</string>
+    <string name="teamname2">Name des Teams 2</string>
+    <string name="start_game">Spiel Starten</string>
+    <string name="main_menu">Hauptmenü</string>
+    <string name="fin_partido">ENDE DES SPIELS</string>
+    <string name="congrats">GLÜCKWUNSCH!</string>
+    <string name="empate">Das Ergebnis war ein Unentschieden</string>
+    <string name="ganador">Der Gewinner ist</string>
+    <string name="ventaja">VORTEIL</string>
+    <string name="cambio">Feldwechsel</string>
+    <!-- Agrega más cadenas según sea necesario -->
+</resources>

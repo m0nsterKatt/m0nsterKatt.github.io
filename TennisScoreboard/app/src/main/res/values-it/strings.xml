@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Tennis Tabellone segnapunti del tennis</string>
+    <string name="settings">Collocamento</string>
+    <string name="back">Indietro</string>
+    <string name="select_language">Seleziona la Lingua Idioma</string>
+    <string name="end_match">Fine Partita</string>
+    <string name="pausar_match">Metti in Pausa la Partita</string>
+    <string name="reanudar_match">Riprendi la Partita</string>
+    <string name="dark_mode">Modalità Scura</string>
+    <string name="log">Registro delle Partite</string>
+    <string name="new_game">Nuova Partita</string>
+    <string name="player1">Giocatore 1</string>
+    <string name="player2">Giocatore 2</string>
+    <string name="team1">Squadra 1</string>
+    <string name="team2">Squadra 2</string>
+    <string name="name1">Nome del Giocatore 1</string>
+    <string name="name2">Nome del Giocatore 2</string>
+    <string name="teamname1">Nome della Squadra 1</string>
+    <string name="teamname2">Nome della Squadra 2</string>
+    <string name="start_game">Iniziare la Partita</string>
+    <string name="main_menu">Menu Principale</string>
+    <string name="fin_partido">FINE DELLA PARTITA</string>
+    <string name="congrats">CONGRATULAZIONI!</string>
+    <string name="empate">Il risultato è stato un pareggio</string>
+    <string name="ganador">"Il vincitore è "</string>
+    <string name="ventaja">VANTAGGIO</string>
+    <string name="cambio">Cambio di Campo</string>
+    <!-- Agrega más cadenas según sea necesario -->
+</resources>

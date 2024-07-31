@@ -1,8 +1,8 @@
 package com.tennis.scoreboard;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
-import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -38,7 +37,6 @@ public class SettingsActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         languageSpinner.setAdapter(adapter);
 
-
         // Cargar la preferencia de idioma guardada
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String language = prefs.getString("language", "es"); // Por defecto, español
@@ -49,19 +47,19 @@ public class SettingsActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedLanguage = getLanguageCode(position);
                 if (!selectedLanguage.equals(getCurrentLanguage())) {
+                    // Guardar el idioma seleccionado antes de reiniciar la aplicación
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putString("language", selectedLanguage);
                     editor.apply();
-                    applyLocale(); // Aplicar el nuevo idioma
-                    recreate(); // Recargar la actividad para aplicar el cambio de idioma
+                    LocaleHelper.setLocale(getApplicationContext(), selectedLanguage);
+                    restartApp(); // Reiniciar la aplicación para aplicar el cambio de idioma
                 }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                recreate(); // Recargar la actividad para aplicar el cambio de idioma
+                // No action needed
             }
-
         });
 
         // Cargar la preferencia de modo oscuro
@@ -82,51 +80,56 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(newBase);
-        String language = prefs.getString("language", "es");
-        super.attachBaseContext(updateBaseContextLocale(newBase, language));
-    }
-
-    private Context updateBaseContextLocale(Context context, String language) {
-        Locale locale = new Locale(language);
-        Locale.setDefault(locale);
-        Configuration config = context.getResources().getConfiguration();
-        config.setLocale(locale);
-        return context.createConfigurationContext(config);
+        super.attachBaseContext(LocaleHelper.updateLocale(newBase));
     }
 
     private void applyLocale() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String language = prefs.getString("language", "es");
-        setLocale(language);
-    }
-
-    private void setLocale(String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        LocaleHelper.setLocale(this, language);
     }
 
     private String getLanguageCode(int position) {
-        String[] languageCodes = getResources().getStringArray(R.array.language_values);
-        return languageCodes[position];
+        switch (position) {
+            case 0:
+                return "es"; // Español
+            case 1:
+                return "en"; // Inglés
+            case 2:
+                return "fr"; // Francés
+            case 3:
+                return "ca"; // Catalán
+            case 4:
+                return "it"; // Italiano
+            case 5:
+                return "de"; // Alemán
+            default:
+                return "es"; // Por defecto, español
+        }
     }
 
     private int getLanguagePosition(String languageCode) {
-        String[] languageCodes = getResources().getStringArray(R.array.language_values);
-        for (int i = 0; i < languageCodes.length; i++) {
-            if (languageCodes[i].equals(languageCode)) {
-                return i;
-            }
+        switch (languageCode) {
+            case "es":
+                return 0;
+            case "en":
+                return 1;
+            case "fr":
+                return 2;
+            case "ca":
+                return 3;
+            case "it":
+                return 4;
+            case "de":
+                return 5;
+            default:
+                return 0; // Por defecto, la primera posición (español)
         }
-        return 0; // Por defecto, la primera posición
     }
 
     private String getCurrentLanguage() {
-        return Locale.getDefault().getLanguage();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        return prefs.getString("language", "es");
     }
 
     private void applyDarkMode() {
@@ -136,6 +139,15 @@ public class SettingsActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+    }
+
+    private void restartApp() {
+        Intent intent = getBaseContext().getPackageManager()
+                .getLaunchIntentForPackage(getBaseContext().getPackageName());
+        if (intent != null) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         }
     }
 }
