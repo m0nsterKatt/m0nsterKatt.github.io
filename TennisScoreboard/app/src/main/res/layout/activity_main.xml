@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_image"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_new_game"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/button_background"
+        android:minWidth="90dip"
+        android:minHeight="48dp"
+        android:onClick="openNewGame"
+        android:text="@string/new_game" />
+
+    <Button
+        android:id="@+id/button_game_log"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_new_game"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_background"
+        android:minHeight="48dp"
+        android:onClick="openGameLog"
+        android:text="@string/log" />
+
+    <Button
+        android:id="@+id/button_settings"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_game_log"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button_background"
+        android:minHeight="48dp"
+        android:onClick="openSettings"
+        android:text="@string/settings" />
+</RelativeLayout>

@@ -1,0 +1,73 @@
+#!/usr/bin/env sh
+
+##############################################################################
+##
+##  Gradle start up script for UN*X
+##
+##############################################################################
+
+# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+DEFAULT_JVM_OPTS=""
+
+APP_NAME="Gradle"
+APP_BASE_NAME=`basename "$0"`
+
+# We need to use POSIX-compliant command substitution syntax: $(...)
+# and the "test" command to remain compatible with the widest array of POSIX shells
+# See: https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html
+
+# OS specific support (must be 'true' or 'false').
+darwin=false
+case "`uname`" in
+  Darwin*) darwin=true ;;
+esac
+
+# Resolve links: $0 may be a link
+PRG="$0"
+while [ -h "$PRG" ]; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+SAVED_IFS="$IFS"
+IFS=$(echo -en "\n\b")
+PRG_DIR=`dirname "$PRG"`
+EXECUTABLE=gradle
+if [ -n "$PRG_DIR" ]; then
+  if [ -x "$PRG_DIR/$EXECUTABLE" ]; then
+    EXECUTABLE="$PRG_DIR/$EXECUTABLE"
+  fi
+fi
+IFS="$SAVED_IFS"
+
+# Grab the base URL to resolve in case we have an application bundle provided by the wrapper.
+# shellcheck disable=SC2006
+case "$OSTYPE" in
+  cygwin* | msys* | mingw*)
+    if [ -x "$EXECUTABLE.bat" ]; then
+      EXECUTABLE="$EXECUTABLE.bat"
+    fi
+    ;;
+esac
+
+# Initialize the JAR folder to use for Gradle distribution.
+DIST_DIR=`dirname "$0"`/gradle/wrapper/dists
+DIST_URL="https\://services.gradle.org/distributions/gradle-7.2-bin.zip"
+
+# Determine if we need to download the Gradle distribution.
+if [ ! -f "$DIST_DIR/$APP_NAME-$APP_VERSION/gradle-$GRADLE_VERSION-$APP_VERSION-all.zip" ]; then
+  echo "Downloading $DIST_URL"
+  mkdir -p "$DIST_DIR/$APP_NAME-$APP_VERSION"
+  curl -L "$DIST_URL" -o "$DIST_DIR/$APP_NAME-$APP_VERSION/gradle-$GRADLE_VERSION-$APP_VERSION-all.zip"
+fi
+
+# Unzip the distribution in case we haven't done that yet.
+if [ ! -d "$DIST_DIR/$APP_NAME-$APP_VERSION/gradle-$GRADLE_VERSION-$APP_VERSION" ]; then
+  unzip -q "$DIST_DIR/$APP_NAME-$APP_VERSION/gradle-$GRADLE_VERSION-$APP_VERSION-all.zip" -d "$DIST_DIR/$APP_NAME-$APP_VERSION"
+fi
+
+exec "$DIST_DIR/$APP_NAME-$APP_VERSION/gradle-$GRADLE_VERSION-$APP_VERSION/bin/gradle" "$@"

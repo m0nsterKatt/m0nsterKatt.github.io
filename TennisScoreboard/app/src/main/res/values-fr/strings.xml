@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Tableau de Bord de Tennis</string>
+    <string name="settings">Paramètres</string>
+    <string name="back">Retour</string>
+    <string name="select_language">Choisir la Langue</string>
+    <string name="end_match">Fin du Match</string>
+    <string name="pausar_match">Paus</string>
+    <string name="reanudar_match">Reprendre le Match</string>
+    <string name="dark_mode">Mode Sombre</string>
+    <string name="log">Journal des Matchs</string>
+    <string name="new_game">Nouveau Match</string>
+    <string name="player1">Joueur 1</string>
+    <string name="player2">Joueur 2</string>
+    <string name="team1">Équipe 1</string>
+    <string name="team2">Équipe 2</string>
+    <string name="name1">Joueur 1</string>
+    <string name="name2">Joueur 2</string>
+    <string name="teamname1">Équipe 1</string>
+    <string name="teamname2">Équipe 2</string>
+    <string name="start_game">Commencer le Match</string>
+    <string name="main_menu">Retour au Menu Principal</string>
+    <string name="fin_partido">FIN DU MATCH</string>
+    <string name="congrats">TOUTES NOS FÉLICITATIONS!</string>
+    <string name="empate">Le résultat s\'est soldé par une égalité</string>
+    <string name="ganador">"Le gagnant est "</string>
+    <string name="ventaja">AVANTAGE</string>
+    <string name="cambio">Changer de champ</string>
+    <!-- Agrega más cadenas según sea necesario -->
+</resources>

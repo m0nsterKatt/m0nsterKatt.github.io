@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.tennis.scoreboard.app-mergeDebugResources-37:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\monsi\\.gradle\\caches\\transforms-4\\1da6c758042ca03d1b7c2e9419154d3d\\transformed\\appcompat-1.7.0\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

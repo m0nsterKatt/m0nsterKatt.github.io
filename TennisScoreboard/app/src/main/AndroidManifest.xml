@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".GameLogActivity"></activity>
+        <activity android:name=".NewGameActivity"></activity>
+        <activity android:name=".SingleGameSetupActivity"></activity>
+        <activity android:name=".SingleGameActivity"></activity>
+        <activity android:name=".DoubleGameSetupActivity"></activity>
+        <activity android:name=".DoubleGamePlayerSelectionActivity"></activity>
+        <activity android:name=".DoubleGameActivity"></activity>
+        <activity android:name=".SelectServerActivity"></activity>
+        <activity android:name=".CommonEndMatchActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

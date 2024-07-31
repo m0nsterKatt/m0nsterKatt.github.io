@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable-night_main_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable-night\\main_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\xml_preferences.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\xml\\preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_single_game_setup.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_single_game_setup.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_single_game.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_single_game.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable-night_players_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable-night\\players_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\raw_win_sound.mp3.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\raw\\win_sound.mp3"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_log_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\log_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_court_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\court_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable-night_bg_light.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable-night\\bg_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_select_server.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_select_server.xml"
+    },
+    {
+        "merged": "com.tennis.scoreboard.app-debug-39:/layout_activity_single_game_setup.xml.flat",
+        "source": "com.tennis.scoreboard.app-main-41:/layout/activity_single_game_setup.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_bg_light.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\bg_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_item_game_log.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\item_game_log.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_matchtype_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\matchtype_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_preferences.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable-night_settings_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable-night\\settings_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_rounded_corners.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\rounded_corners.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_common_end_match.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_common_end_match.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_double_game_player_selection.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_double_game_player_selection.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_double_game_setup.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_double_game_setup.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_button_background_rounded.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\button_background_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_main_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\main_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_fragment_settings.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\fragment_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable-night_matchtype_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable-night\\matchtype_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_button_background.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable-night_log_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable-night\\log_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_double_game.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_double_game.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\mipmap_ic_launcher.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\mipmap\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable-night_button_background_rounded.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable-night\\button_background_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_game_log.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_game_log.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_players_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\players_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable_settings_image.png.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable\\settings_image.png"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\layout_activity_new_game.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\layout\\activity_new_game.xml"
+    },
+    {
+        "merged": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-debug-39:\\drawable-night_button_background.xml.flat",
+        "source": "C:\\Users\\monsi\\.gradle\\daemon\\8.7\\com.tennis.scoreboard.app-main-41:\\drawable-night\\button_background.xml"
+    }
+]

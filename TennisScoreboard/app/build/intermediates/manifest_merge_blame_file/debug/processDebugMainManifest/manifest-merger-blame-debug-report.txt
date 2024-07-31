@@ -1,0 +1,167 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.myapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <permission
+11-->[androidx.core:core:1.13.0] C:\Users\monsi\.gradle\caches\transforms-4\7355ed258ff004f1f7a52a25b39730a1\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+12        android:name="com.example.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.13.0] C:\Users\monsi\.gradle\caches\transforms-4\7355ed258ff004f1f7a52a25b39730a1\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.13.0] C:\Users\monsi\.gradle\caches\transforms-4\7355ed258ff004f1f7a52a25b39730a1\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.example.myapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.13.0] C:\Users\monsi\.gradle\caches\transforms-4\7355ed258ff004f1f7a52a25b39730a1\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.13.0] C:\Users\monsi\.gradle\caches\transforms-4\7355ed258ff004f1f7a52a25b39730a1\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:3:5-27:19
+18        android:allowBackup="true"
+18-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:4:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.13.0] C:\Users\monsi\.gradle\caches\transforms-4\7355ed258ff004f1f7a52a25b39730a1\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+20        android:debuggable="true"
+21        android:extractNativeLibs="true"
+22        android:icon="@mipmap/ic_launcher"
+22-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:5:9-43
+23        android:label="@string/app_name"
+23-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:6:9-41
+24        android:supportsRtl="true"
+24-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:7:9-35
+25        android:testOnly="true"
+26        android:theme="@style/AppTheme" >
+26-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:8:9-40
+27        <activity android:name="com.tennis.scoreboard.SettingsActivity" />
+27-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:9:9-63
+27-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:9:19-51
+28        <activity android:name="com.tennis.scoreboard.GameLogActivity" />
+28-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:10:9-62
+28-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:10:19-50
+29        <activity android:name="com.tennis.scoreboard.NewGameActivity" />
+29-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:11:9-62
+29-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:11:19-50
+30        <activity android:name="com.tennis.scoreboard.SingleGameSetupActivity" />
+30-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:12:9-70
+30-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:12:19-58
+31        <activity android:name="com.tennis.scoreboard.SingleGameActivity" />
+31-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:13:9-65
+31-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:13:19-53
+32        <activity android:name="com.tennis.scoreboard.DoubleGameSetupActivity" />
+32-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:14:9-70
+32-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:14:19-58
+33        <activity android:name="com.tennis.scoreboard.DoubleGamePlayerSelectionActivity" />
+33-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:15:9-80
+33-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:15:19-68
+34        <activity android:name="com.tennis.scoreboard.DoubleGameActivity" />
+34-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:16:9-65
+34-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:16:19-53
+35        <activity android:name="com.tennis.scoreboard.SelectServerActivity" />
+35-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:17:9-67
+35-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:17:19-55
+36        <activity android:name="com.tennis.scoreboard.CommonEndMatchActivity" />
+36-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:18:9-69
+36-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:18:19-57
+37        <activity
+37-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:19:9-26:20
+38            android:name="com.tennis.scoreboard.MainActivity"
+38-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:20:13-41
+39            android:exported="true" >
+39-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:21:13-36
+40            <intent-filter>
+40-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:22:13-25:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:23:17-69
+41-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:23:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:24:17-77
+43-->C:\Users\monsi\Desktop\TennisScoreboard\app\src\main\AndroidManifest.xml:24:27-74
+44            </intent-filter>
+45        </activity>
+46
+47        <provider
+47-->[androidx.emoji2:emoji2:1.3.0] C:\Users\monsi\.gradle\caches\transforms-4\bbff60290d60267acd87fec74002c126\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+48            android:name="androidx.startup.InitializationProvider"
+48-->[androidx.emoji2:emoji2:1.3.0] C:\Users\monsi\.gradle\caches\transforms-4\bbff60290d60267acd87fec74002c126\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
+49            android:authorities="com.example.myapp.androidx-startup"
+49-->[androidx.emoji2:emoji2:1.3.0] C:\Users\monsi\.gradle\caches\transforms-4\bbff60290d60267acd87fec74002c126\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+50            android:exported="false" >
+50-->[androidx.emoji2:emoji2:1.3.0] C:\Users\monsi\.gradle\caches\transforms-4\bbff60290d60267acd87fec74002c126\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+51            <meta-data
+51-->[androidx.emoji2:emoji2:1.3.0] C:\Users\monsi\.gradle\caches\transforms-4\bbff60290d60267acd87fec74002c126\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+52-->[androidx.emoji2:emoji2:1.3.0] C:\Users\monsi\.gradle\caches\transforms-4\bbff60290d60267acd87fec74002c126\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+53                android:value="androidx.startup" />
+53-->[androidx.emoji2:emoji2:1.3.0] C:\Users\monsi\.gradle\caches\transforms-4\bbff60290d60267acd87fec74002c126\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+54            <meta-data
+54-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\monsi\.gradle\caches\transforms-4\fb7849b71f37df2cbd33d1dc3c9740cc\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\monsi\.gradle\caches\transforms-4\fb7849b71f37df2cbd33d1dc3c9740cc\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+56                android:value="androidx.startup" />
+56-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\monsi\.gradle\caches\transforms-4\fb7849b71f37df2cbd33d1dc3c9740cc\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+57            <meta-data
+57-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+58                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+58-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+59                android:value="androidx.startup" />
+59-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+60        </provider>
+61
+62        <uses-library
+62-->[androidx.window:window:1.0.0] C:\Users\monsi\.gradle\caches\transforms-4\5e8c17ef1e9c3f26e7491690c3e279fc\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+63            android:name="androidx.window.extensions"
+63-->[androidx.window:window:1.0.0] C:\Users\monsi\.gradle\caches\transforms-4\5e8c17ef1e9c3f26e7491690c3e279fc\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+64            android:required="false" />
+64-->[androidx.window:window:1.0.0] C:\Users\monsi\.gradle\caches\transforms-4\5e8c17ef1e9c3f26e7491690c3e279fc\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+65        <uses-library
+65-->[androidx.window:window:1.0.0] C:\Users\monsi\.gradle\caches\transforms-4\5e8c17ef1e9c3f26e7491690c3e279fc\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+66            android:name="androidx.window.sidecar"
+66-->[androidx.window:window:1.0.0] C:\Users\monsi\.gradle\caches\transforms-4\5e8c17ef1e9c3f26e7491690c3e279fc\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+67            android:required="false" />
+67-->[androidx.window:window:1.0.0] C:\Users\monsi\.gradle\caches\transforms-4\5e8c17ef1e9c3f26e7491690c3e279fc\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+68
+69        <receiver
+69-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+70            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+70-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+71            android:directBootAware="false"
+71-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+72            android:enabled="true"
+72-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+73            android:exported="true"
+73-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+74            android:permission="android.permission.DUMP" >
+74-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+75            <intent-filter>
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+76                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+77            </intent-filter>
+78            <intent-filter>
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+79                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+80            </intent-filter>
+81            <intent-filter>
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+82                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+83            </intent-filter>
+84            <intent-filter>
+84-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+85                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\monsi\.gradle\caches\transforms-4\6254ae4f9cd24468116e49c2c1f0950c\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+86            </intent-filter>
+87        </receiver>
+88    </application>
+89
+90</manifest>

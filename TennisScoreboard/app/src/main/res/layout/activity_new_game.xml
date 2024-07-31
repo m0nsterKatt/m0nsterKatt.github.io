@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/matchtype_image"
+    android:gravity="center"
+    tools:context=".NewGameActivity">
+
+    <Button
+        android:id="@+id/button_single"
+        style="@style/AppTheme.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="300dp"
+        android:width="200dp"
+        android:height="40dp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:onClick="startSingleGame"
+        android:padding="10dp"
+        android:text="@string/single_game"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/button_double"
+        style="@style/AppTheme.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_single"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:width="200dp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:onClick="startDoubleGame"
+        android:padding="10dp"
+        android:text="@string/double_game"
+        android:textColor="@android:color/black" />
+</RelativeLayout>

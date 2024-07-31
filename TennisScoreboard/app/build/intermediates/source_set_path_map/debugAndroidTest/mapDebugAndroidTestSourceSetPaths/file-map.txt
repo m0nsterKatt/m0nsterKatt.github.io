@@ -1,0 +1,5 @@
+com.tennis.scoreboard.test.app-jetified-core-1.6.1-0 C:\Users\monsi\.gradle\caches\transforms-4\ed5cd8e4e7e89a7a5160a0129180f62e\transformed\jetified-core-1.6.1\res
+com.tennis.scoreboard.test.app-androidTest-1 C:\Users\monsi\Desktop\TennisScoreboard\app\build\generated\res\resValues\androidTest\debug
+com.tennis.scoreboard.test.app-mergeDebugAndroidTestResources-2 C:\Users\monsi\Desktop\TennisScoreboard\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.tennis.scoreboard.test.app-mergeDebugAndroidTestResources-3 C:\Users\monsi\Desktop\TennisScoreboard\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.tennis.scoreboard.test.app-debugAndroidTest-4 C:\Users\monsi\Desktop\TennisScoreboard\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

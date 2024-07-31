@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Tennis Scoreboard</string>
+    <string name="settings">Configuración</string>
+    <string name="back">Atrás</string>
+    <string name="select_language">Seleccionar Idioma</string>
+    <string name="single_game" translatable="false">Single 1 vs 1</string>
+    <string name="end_match">Finalizar Partido</string>
+    <string name="pausar_match">Pausar Partido</string>
+    <string name="reanudar_match">Reanudar Partido</string>
+    <string name="double_game" translatable="false">Double 2 vs 2</string>
+    <string name="dark_mode">Modo Oscuro</string>
+    <string name="log">Registro de Partidos</string>
+    <string name="new_game">Nuevo partido</string>
+    <string name="player1">Jugador 1</string>
+    <string name="player2">Jugador 2</string>
+    <string name="team1">Equipo 1</string>
+    <string name="team2">Equipo 2</string>
+    <string name="name1">Nombre del Jugador 1</string>
+    <string name="name2">Nombre del Jugador 2</string>
+    <string name="teamname1">Nombre del Equipo 1</string>
+    <string name="teamname2">Nombre del Equipo 2</string>
+    <string name="start_game">Comenzar Partido</string>
+    <string name="main_menu">Volver al Menú Principal</string>
+    <string name="fin_partido">FIN DEL PARTIDO</string>
+    <string name="congrats">¡ENHORABUENA!</string>
+    <string name="empate">El resultado ha acabado en empate</string>
+    <string name="ganador">El ganador es</string>
+    <string name="ventaja">VENTAJA</string>
+    <string name="cambio">Cambio de campo</string>
+    <!-- Agrega más cadenas según sea necesario -->
+</resources>

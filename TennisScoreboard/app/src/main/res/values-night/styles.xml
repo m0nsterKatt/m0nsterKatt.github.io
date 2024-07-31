@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#1B5F1D</item>
+        <item name="colorAccent">#FFEB3B</item>
+        <item name="android:buttonStyle">@style/AppTheme.Button.Dark</item>
+    </style>
+
+    <!-- Estilo para los botones en el tema oscuro -->
+    <style name="AppTheme.Button.Dark">
+        <item name="android:background">@drawable/button_background_rounded</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="button_background">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/button_background</item>
+    </style>
+
+</resources>
