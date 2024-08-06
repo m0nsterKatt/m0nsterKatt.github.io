@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffd1dc; /* Fondo pastel entre rosa y anaranjado */
+}
+
+header .banner {
+  text-align: center;
+}
+
+header .banner img {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+.container {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #ff7f50;
+  text-align: center;
+}
+
+.category-list,
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.category-list a,
+.recipe-list a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  width: calc(25% - 20px); /* Ajusta el ancho para que quepan 4 imágenes en una fila */
+  box-sizing: border-box;
+}
+
+.category-list a img,
+.recipe-list a img {
+  width: 100%;
+  height: 200px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Recorta la imagen para que se ajuste al tamaño */
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe input[type="email"] {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.subscribe button {
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe button:hover {
+  background-color: #ff6347;
+}
