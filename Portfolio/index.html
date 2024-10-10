@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Desarrolladora Web</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        function abrirVideo() {
+            // Abrir una nueva pestaña y verificar si fue bloqueada por el navegador
+            var nuevaPestaña = window.open('', '_blank');
+            if (!nuevaPestaña || nuevaPestaña.closed || typeof nuevaPestaña.closed === 'undefined') {
+                alert("Permite las ventanas emergentes en tu navegador para ver el video.");
+                return;
+            }
+            
+            // Escribir el contenido HTML de la nueva pestaña con el video
+            nuevaPestaña.document.write(`
+                <html>
+                <head>
+                    <title>Demo de la App</title>
+                </head>
+                <body>
+                    <h1>Demo Tennis Scoreboard</h1>
+                    <video width="600" controls autoplay>
+                        <source src="videos/proyecto1.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Hola, soy <span class="highlight">Montse Martí, Desarrolladora Web</span></h1>
+        <p>Creo experiencias digitales funcionales y atractivas.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Proyectos</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="/images/proyecto1.png" alt="Proyecto 1 - Tennis Scoreboard">
+                <h3>Tennis Scoreboard</h3>
+                <p>Sencilla aplicación Android programada con Java, usando Android Studio.</p>
+                <p>Es un marcador para los partidos de tenis, tanto singles como doubles.</p>
+                <button type="button" onclick="abrirVideo()">Ver vídeo demo de la app</button>
+            </div>
+            <div class="project">
+                <img src="proyecto2.jpg" alt="Proyecto 2">
+                <h3>Proyecto 2</h3>
+                <p>Descripción breve del proyecto.</p>
+            </div>
+            <!-- Añadir más proyectos según sea necesario -->
+        </div>
+    </section>
+
+   <!-- Skills Section -->
+   <section id="skills" class="section">
+    <h2>Habilidades</h2>
+    <div class="skill-container">
+        <div class="skill">
+            <p>HTML</p>
+            <div class="progress-bar">
+                <div class="progress" data-skill-level="100"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="progress-bar">
+                <div class="progress" data-skill-level="90"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="progress-bar">
+                <div class="progress" data-skill-level="80"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Bootstrap</p>
+            <div class="progress-bar">
+                <div class="progress" data-skill-level="75"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>React</p>
+            <div class="progress-bar">
+                <div class="progress" data-skill-level="70"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Angular</p>
+            <div class="progress-bar">
+                <div class="progress" data-skill-level="65"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>SQL</p>
+            <div class="progress-bar">
+                <div class="progress" data-skill-level="40"></div>
+            </div>
+        </div>
+        <!-- Añadir más habilidades según sea necesario -->
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contacto</h2>
+        <p>¡Estoy disponible para nuevos proyectos! No dudes en contactarme.</p>
+        <form id="contact-form">
+            <input class ="text" type="text" name="name" placeholder="Tu Nombre" required>
+            <input class ="text" type="email" name="email" placeholder="Tu Email" required>
+            <textarea class ="message" name="message" placeholder="Tu Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 - Montse Martí, Desarrolladora Web</p>
+    </footer>
+
+    <script src="/scripts/scripts.js"></script>
+</body>
+</html>

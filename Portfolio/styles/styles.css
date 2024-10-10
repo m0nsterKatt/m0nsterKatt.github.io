@@ -1,0 +1,247 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+#hero {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffadad;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero .highlight {
+    color: #ff6347;
+}
+
+#hero button {
+    background-color: #ff6347;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #ff4500;
+}
+
+#about {
+    text-align: justify;
+}
+
+/* Estilos para la sección "Sobre Mí" */
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al principio */
+    justify-content: space-between; /* Espacio entre la imagen y el texto */
+    margin: 50px 0;
+}
+
+.profile-image {
+    width: 25%; /* La imagen ocupará 1/4 del ancho */
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%; /* Asegúrate que la imagen se adapte al tamaño del contenedor */
+    height: auto;
+    border-radius: 50%; /* Hacer la imagen redonda */
+}
+
+.me {
+    width: 70%; /* El texto ocupará 3/4 del ancho */
+    padding-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+#cursor {
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    color: #333;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Contenedor de la máquina de escribir */
+#typewriter-container {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+    white-space: normal; /* Permite que el texto se ajuste a múltiples líneas */
+    overflow-wrap: break-word; /* Asegura que las palabras largas se dividan si es necesario */
+    word-wrap: break-word;
+    max-width: 100%; /* Asegura que el contenedor no sobrepase el ancho de la pantalla */
+}
+
+/* Estilos para las palabras destacadas */
+.highlight {
+    font-weight: normal;
+    transition: font-size 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+    display: inline-block; /* Asegura que el cambio de tamaño no afecte el flujo del texto */
+}
+
+/* Cuando el cursor pasa sobre la palabra */
+.highlight:hover {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ff6347; /* Cambia este color según tu preferencia */
+}
+
+.section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.projects-container {
+    display: flex;
+    gap: 20px;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos para la sección de habilidades */
+.skill-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress {
+    height: 25px;
+    width: 0;
+    background-color: #ff6347; /* Cambia este color según tu preferencia */
+    border-radius: 25px;
+    transition: width 2s ease-in-out;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.text {
+    width: 25%;
+    padding: 10px;
+    border-radius: 90px;
+    margin: 10px;
+}
+
+.message {
+    width: 52%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#contact {
+    text-align: center;
+}
+
+button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px;
+    border-radius: 90px;
+    width: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transición */
+}
+
+button:hover {
+    background-color: #ccffcc; /* Verde clarito en hover */
+    color: #000000; /* Letras negras en hover */
+}
