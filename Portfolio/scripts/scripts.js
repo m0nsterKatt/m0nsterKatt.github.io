@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressBars = document.querySelectorAll('.progress');
 
     const observerOptions = {
-        threshold: 0.75  // Cuando el 50% de la sección sea visible
+        threshold: 0.5  // Cuando el 50% de la sección sea visible
     };
 
     const skillObserver = new IntersectionObserver((entries, observer) => {
@@ -136,3 +136,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // Iniciar la observación de la sección de habilidades
     skillObserver.observe(skillSection);
 });
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.querySelector('input[name="name"]').value;
+    let email = document.querySelector('input[name="email"]').value;
+    let message = document.querySelector('textarea[name="message"]').value;
+
+    let emailError = document.getElementById("email-error");
+
+    if (!validateEmail(email)) {
+        emailError.style.display = "block"; // Mostrar mensaje de error si el correo no es válido
+        return;
+    } else {
+        emailError.style.display = "none"; // Ocultar mensaje si el correo es válido
+    }
+
+    // Si es válido, proceder con el envío
+    fetch('https://formspree.io/f/mrbgbkje', { 
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Gracias por tu mensaje, te responderé pronto.");
+            document.getElementById("contact-form").reset();
+        } else {
+            throw new Error("Ocurrió un error, intenta nuevamente.");
+        }
+    })
+    .catch(error => {
+        alert("Ocurrió un error, intenta nuevamente.");
+    });
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
