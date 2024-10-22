@@ -94,7 +94,7 @@ header nav ul li a:hover {
 }
 
 .profile-image {
-    width: 25%; /* La imagen ocupará 1/4 del ancho */
+    width: 40%; /* La imagen ocupará 1/4 del ancho */
     text-align: center;
 }
 
@@ -104,8 +104,8 @@ header nav ul li a:hover {
     border-radius: 50%; /* Hacer la imagen redonda */
 }
 
-.me {
-    width: 70%; /* El texto ocupará 3/4 del ancho */
+.about-text {
+    width: 60%; /* El texto ocupará 3/4 del ancho */
     padding-left: 20px; /* Espacio entre la imagen y el texto */
 }
 
@@ -131,6 +131,23 @@ header nav ul li a:hover {
     overflow-wrap: break-word; /* Asegura que las palabras largas se dividan si es necesario */
     word-wrap: break-word;
     max-width: 100%; /* Asegura que el contenedor no sobrepase el ancho de la pantalla */
+}
+
+/* Hacer que las columnas se ajusten en pantallas pequeñas */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Hacer que las columnas se apilen verticalmente */
+        align-items: center;
+    }
+
+    .about-image, .about-text {
+        width: 100%; /* Las columnas ocupan el 100% del ancho en pantallas pequeñas */
+        text-align: center; /* Centrar el contenido en pantallas pequeñas */
+    }
+
+    .about-image img {
+        max-width: 150px; /* Controlar el tamaño de la imagen en pantallas pequeñas */
+    }
 }
 
 /* Estilos para las palabras destacadas */
@@ -164,22 +181,26 @@ header nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    flex: 1;
+    box-sizing: border-box;
 }
 
 .project img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 200px;
     border-radius: 8px;
 }
 
 /* Estilos para la sección de habilidades */
 .skill-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las columnas */
 }
 
 .skill {
+    flex: 1 1 40%; /* Cada habilidad ocupará aproximadamente el 45% del contenedor */
     margin-bottom: 20px;
 }
 
@@ -203,6 +224,13 @@ header nav ul li a:hover {
     background-color: #ff6347; /* Cambia este color según tu preferencia */
     border-radius: 25px;
     transition: width 2s ease-in-out;
+}
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+    .skill {
+        flex: 1 1 100%; /* En pantallas pequeñas, cada habilidad ocupará el 100% del ancho */
+    }
 }
 
 
