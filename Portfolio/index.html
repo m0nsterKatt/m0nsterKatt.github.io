@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Desarrolladora Web</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Montse's Portfolio - Desarrolladora Web</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         function abrirVideo() {
@@ -52,84 +52,119 @@
         <p>Creo experiencias digitales funcionales y atractivas.</p>
     </section>
 
+     <!-- About Me Section -->
+<section id="about" class="section">
+    <h2>Sobre Mí</h2>
+    <div class="about-container">
+        <!-- Columna de la imagen -->
+        <div class="profile-image">
+            <img src="images/hero-bg.png" alt="Mi Imagen de Perfil">
+        </div>
+
+        <!-- Columna del texto (máquina de escribir) -->
+        <div class="about-text">
+            <div id="typewriter-container"></div>
+            <span id="cursor">|</span>
+        </div>
+    </div>
+</section>
+
     <!-- Projects Section -->
     <section id="projects" class="section">
         <h2>Proyectos</h2>
         <div class="projects-container">
             <div class="project">
-                <img src="/images/proyecto1.png" alt="Proyecto 1 - Tennis Scoreboard">
+                <img class="logo" src="images/proyecto1.png" alt="Proyecto 1 - Tennis Scoreboard">
                 <h3>Tennis Scoreboard</h3>
                 <p>Sencilla aplicación Android programada con Java, usando Android Studio.</p>
                 <p>Es un marcador para los partidos de tenis, tanto singles como doubles.</p>
                 <button type="button" onclick="abrirVideo()">Ver vídeo demo de la app</button>
             </div>
             <div class="project">
-                <img src="proyecto2.jpg" alt="Proyecto 2">
-                <h3>Proyecto 2</h3>
-                <p>Descripción breve del proyecto.</p>
+                <img src="images/proyecto2.png" alt="Proyecto 2">
+                <h3>Miss Recetas (en construcción)</h3>
+                <p>Portal web con recetas propias. </p>
+                <p>Todavía bajo construcción.</p>
+                <a href="https://m0nsterkatt.github.io/MissRecetas/">
+                    <button type="button">Visitar página web</button>
+                </a>
+            </div>
+            <div class="project">
+                <img src="images/proyecto3.png" alt="Proyecto 3">
+                <h3>Note App</h3>
+                <p>Portal web para crear notas. </p>
+                <p>(Desaparecen cuando cierras el navegador).</p>
+                <a href="https://m0nsterkatt.github.io/NoteApp/">
+                    <button type="button">Visitar página web</button>
+                </a>
             </div>
             <!-- Añadir más proyectos según sea necesario -->
         </div>
     </section>
 
-   <!-- Skills Section -->
-   <section id="skills" class="section">
-    <h2>Habilidades</h2>
-    <div class="skill-container">
-        <div class="skill">
-            <p>HTML</p>
-            <div class="progress-bar">
-                <div class="progress" data-skill-level="100"></div>
+    <section id="skills" class="section">
+        <h2>Stacks y Habilidades</h2>
+        <div class="skill-container">
+            <div class="skill">
+                <p>HTML</p>
+                <div class="progress-bar">
+                    <div class="progress" data-skill-level="100"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>CSS</p>
+                <div class="progress-bar">
+                    <div class="progress" data-skill-level="90"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>JavaScript</p>
+                <div class="progress-bar">
+                    <div class="progress" data-skill-level="80"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Bootstrap</p>
+                <div class="progress-bar">
+                    <div class="progress" data-skill-level="75"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>React</p>
+                <div class="progress-bar">
+                    <div class="progress" data-skill-level="70"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Angular</p>
+                <div class="progress-bar">
+                    <div class="progress" data-skill-level="65"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>SQL</p>
+                <div class="progress-bar">
+                    <div class="progress" data-skill-level="40"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Loading new Skills</p>
+                <div class="progress-bar">
+                    <div class="progress" data-skill-level="0"></div>
+                </div>
             </div>
         </div>
-        <div class="skill">
-            <p>CSS</p>
-            <div class="progress-bar">
-                <div class="progress" data-skill-level="90"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>JavaScript</p>
-            <div class="progress-bar">
-                <div class="progress" data-skill-level="80"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>Bootstrap</p>
-            <div class="progress-bar">
-                <div class="progress" data-skill-level="75"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>React</p>
-            <div class="progress-bar">
-                <div class="progress" data-skill-level="70"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>Angular</p>
-            <div class="progress-bar">
-                <div class="progress" data-skill-level="65"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <p>SQL</p>
-            <div class="progress-bar">
-                <div class="progress" data-skill-level="40"></div>
-            </div>
-        </div>
-        <!-- Añadir más habilidades según sea necesario -->
-    </div>
-</section>
+    </section>    
 
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>Contacto</h2>
         <p>¡Estoy disponible para nuevos proyectos! No dudes en contactarme.</p>
         <form id="contact-form">
-            <input class ="text" type="text" name="name" placeholder="Tu Nombre" required>
-            <input class ="text" type="email" name="email" placeholder="Tu Email" required>
-            <textarea class ="message" name="message" placeholder="Tu Mensaje" required></textarea>
+            <input class="text" type="text" name="name" placeholder="Tu Nombre" required>
+            <input class="text" id="email" type="email" name="email" placeholder="Tu Email" required>
+            <span id="email-error" style="color: red; display: none;">Correo inválido</span>
+            <textarea class="message" name="message" placeholder="Tu Mensaje" required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </section>
@@ -138,6 +173,6 @@
         <p>&copy; 2024 - Montse Martí, Desarrolladora Web</p>
     </footer>
 
-    <script src="/scripts/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
