@@ -1,4 +1,8 @@
-/* Estilos generales */
+/* 🎨 ESTILOS GENERALES */
+* {
+  transition: background-color 0.3s, color 0.3s;
+}
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #f8c8dc;
@@ -7,13 +11,13 @@ body {
   height: 100vh;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* 🏠 CONTENEDOR PRINCIPAL */
 .container {
   display: flex;
   width: 100%;
 }
 
-/* MENÚ LATERAL */
+/* 📌 MENÚ LATERAL */
 .sidebar {
   width: 250px;
   background: #ffe4e1;
@@ -42,13 +46,14 @@ body {
   cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
+  transition: background 0.3s;
 }
 
 .sidebar button:hover {
   background: #ff1493;
 }
 
-/* SECCIÓN PRINCIPAL */
+/* 📖 SECCIÓN PRINCIPAL */
 .diary-container {
   flex: 1;
   padding: 20px;
@@ -57,7 +62,7 @@ body {
   align-items: center;
 }
 
-/* BARRA DE NAVEGACIÓN (FECHAS) */
+/* 🔼🔽 BARRA DE NAVEGACIÓN (FECHAS) */
 header {
   display: flex;
   align-items: center;
@@ -82,7 +87,7 @@ header span {
   font-weight: bold;
 }
 
-/* CAMPOS NUEVOS */
+/* 📅 CAMPOS PARA LA ENTRADA */
 input[type="date"],
 input[type="text"] {
   width: 100%;
@@ -94,7 +99,7 @@ input[type="text"] {
   border-radius: 5px;
 }
 
-/* ÁREA DE TEXTO */
+/* ✍️ ÁREA DE TEXTO */
 textarea {
   width: 100%;
   max-width: 600px;
@@ -103,7 +108,7 @@ textarea {
   font-size: 16px;
 }
 
-/* BOTÓN DE GUARDAR */
+/* 💾 BOTÓN DE GUARDAR */
 #saveEntry {
   background: #ff69b4;
   color: white;
@@ -119,7 +124,7 @@ textarea {
   background: #ff1493;
 }
 
-/* MODAL */
+/* 📅 MODAL - VISTA MENSUAL */
 .modal {
   display: none;
   position: fixed;
@@ -151,7 +156,7 @@ textarea {
   cursor: pointer;
 }
 
-/* CALENDARIO */
+/* 📆 CALENDARIO */
 #calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -181,7 +186,7 @@ textarea {
   color: white;
 }
 
-/* MODAL PERFIL DE USUARIO */
+/* 👤 MODAL PERFIL DE USUARIO */
 #userProfileModal {
   display: none;
   position: fixed;
@@ -239,4 +244,65 @@ form button {
 
 #deleteAccount:hover {
   background-color: darkred;
+}
+
+/* 🌙 MODO OSCURO */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Cambiar colores de los elementos en modo oscuro */
+.dark-mode .container {
+  background: #2c2c2c;
+}
+
+.dark-mode .sidebar {
+  background: #333;
+}
+
+.dark-mode .sidebar button {
+  background: #555;
+  color: white;
+}
+
+.dark-mode .sidebar button:hover {
+  background: #777;
+}
+
+.dark-mode header {
+  background: #444;
+}
+
+.dark-mode textarea,
+.dark-mode input,
+.dark-mode select {
+  background: #333;
+  color: white;
+  border: 1px solid #777;
+}
+
+/* Cambiar el color de los días en el calendario en modo oscuro */
+.dark-mode .calendar-day {
+  background: #444;
+  color: white;
+}
+
+.dark-mode .calendar-day.has-entry {
+  background: #ff69b4;
+}
+
+/* ✅ MENSAJE DE CONFIRMACIÓN */
+#saveFeedback {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
 }
