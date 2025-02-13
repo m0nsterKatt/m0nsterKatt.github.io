@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Diario</title>
+    <link rel="stylesheet" href="styles/styles_diario.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- MENÚ LATERAL -->
+      <aside class="sidebar">
+        <h2>📌 Menú</h2>
+        <ul>
+          <li><button id="viewMonthly">📆 Vista Mensual</button></li>
+          <li>
+            <button id="toggleNotifications">🔔 Notificaciones: <span id="notifStatus">OFF</span></button>
+          </li>
+          <li><button id="toggleTheme">🌙 Modo Oscuro</button></li>
+          <li><button id="exportEntries">📄 Exportar Notas</button></li>
+        </ul>
+      </aside>
+
+      <!-- SECCIÓN PRINCIPAL -->
+      <main class="diary-container">
+        <header>
+          <button id="prevEntry">⬅️</button>
+          <span id="currentDate">📅 15 de Febrero, 2025</span>
+          <button id="nextEntry">➡️</button>
+        </header>
+
+        <textarea id="diaryEntry" placeholder="Escribe tu entrada..."></textarea>
+        <button id="saveEntry">💾 Guardar</button>
+      </main>
+    </div>
+
+    <script type="module" src="js/diario.js"></script>
+  </body>
+</html>
