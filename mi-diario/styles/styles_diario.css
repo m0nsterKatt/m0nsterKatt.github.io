@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8c8dc;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* MENÚ LATERAL */
+.sidebar {
+  width: 250px;
+  background: #ffe4e1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  color: #d63384;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.sidebar button:hover {
+  background: #ff1493;
+}
+
+/* SECCIÓN PRINCIPAL */
+.diary-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BARRA DE NAVEGACIÓN (FECHAS) */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+header button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+header span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ÁREA DE TEXTO */
+textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 250px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* BOTÓN DE GUARDAR */
+#saveEntry {
+  background: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#saveEntry:hover {
+  background: #ff1493;
+}
