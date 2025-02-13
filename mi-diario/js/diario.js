@@ -1,91 +1,82 @@
 import {
-  addDoc,
-  collection,
-  getDocs,
+  deleteDoc,
+  doc,
+  getDoc,
   getFirestore,
-  query,
-  where,
+  setDoc,
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+import { logout } from "./firebase.js";
 
 const db = getFirestore();
-const saveEntryBtn = document.getElementById("saveEntry");
-const diaryEntry = document.getElementById("diaryEntry");
-const entryTitle = document.getElementById("entryTitle");
-const entryDate = document.getElementById("entryDate");
-const currentDate = document.getElementById("currentDate");
-const prevEntryBtn = document.getElementById("prevEntry");
-const nextEntryBtn = document.getElementById("nextEntry");
-
-const entriesList = [];
-let currentIndex = 0;
+const userProfileBtn = document.getElementById("userProfileBtn");
+const userProfileModal = document.getElementById("userProfileModal");
+const closeProfileModal = document.querySelector(".close");
+const userProfileForm = document.getElementById("userProfileForm");
+const deleteAccountBtn = document.getElementById("deleteAccount");
 
 // Obtener usuario actual
 const user = JSON.parse(localStorage.getItem("user"));
 if (!user) window.location.href = "index.html";
 
-// Poner la fecha actual por defecto
-const today = new Date().toISOString().split("T")[0];
-entryDate.value = today;
+// Abrir y cerrar el modal del perfil
+userProfileBtn.addEventListener("click", () => {
+  userProfileModal.style.display = "flex";
+  loadUserProfile();
+});
 
-// Función para obtener las notas del usuario
-async function loadEntries() {
-  const q = query(collection(db, "diaryEntries"), where("userId", "==", user.uid));
-  const snapshot = await getDocs(q);
+closeProfileModal.addEventListener("click", () => {
+  userProfileModal.style.display = "none";
+});
 
-  entriesList.length = 0; // Limpiar array
-  snapshot.forEach((doc) => {
-    entriesList.push({ id: doc.id, ...doc.data() });
-  });
-
-  if (entriesList.length > 0) {
-    currentIndex = entriesList.length - 1;
-    showEntry();
+// Cargar perfil del usuario
+async function loadUserProfile() {
+  const userDoc = await getDoc(doc(db, "userProfiles", user.uid));
+  if (userDoc.exists()) {
+    const data = userDoc.data();
+    document.getElementById("name").value = data.name || "";
+    document.getElementById("surname").value = data.surname || "";
+    document.getElementById("nickname").value = data.nickname || "";
+    document.getElementById("birthdate").value = data.birthdate || "";
+    document.getElementById("gender").value = data.gender || "";
+    document.getElementById("zodiac").value = data.zodiac || "";
   }
 }
 
-// Mostrar una entrada específica
-function showEntry() {
-  if (entriesList.length > 0) {
-    entryTitle.value = entriesList[currentIndex].title || "";
-    diaryEntry.value = entriesList[currentIndex].text;
-    entryDate.value = new Date(entriesList[currentIndex].date.toDate()).toISOString().split("T")[0];
-    currentDate.textContent = `📅 ${new Date(entriesList[currentIndex].date.toDate()).toLocaleDateString()}`;
-  } else {
-    entryTitle.value = "";
-    diaryEntry.value = "";
-    entryDate.value = today;
-    currentDate.textContent = "📅 No hay notas aún.";
-  }
+// Guardar perfil en Firebase
+userProfileForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const profileData = {
+    name: document.getElementById("name").value,
+    surname: document.getElementById("surname").value,
+    nickname: document.getElementById("nickname").value,
+    birthdate: document.getElementById("birthdate").value,
+    gender: document.getElementById("gender").value,
+    zodiac: getZodiacSign(document.getElementById("birthdate").value),
+  };
+
+  await setDoc(doc(db, "userProfiles", user.uid), profileData);
+  alert("Perfil actualizado con éxito.");
+});
+
+// Obtener signo zodiacal automáticamente
+function getZodiacSign(date) {
+  if (!date) return "";
+  const birthDate = new Date(date);
+  const month = birthDate.getMonth() + 1;
+  const day = birthDate.getDate();
+
+  if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return "Aries";
+  if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return "Tauro";
+  if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return "Géminis";
+  return "Otro";
 }
 
-// Guardar nueva entrada con título y fecha
-saveEntryBtn.addEventListener("click", async () => {
-  if (!user || !diaryEntry.value.trim() || !entryTitle.value.trim()) return;
-
-  await addDoc(collection(db, "diaryEntries"), {
-    userId: user.uid,
-    title: entryTitle.value,
-    text: diaryEntry.value,
-    date: new Date(entryDate.value), // Guardamos la fecha elegida
-  });
-
-  loadEntries();
-});
-
-// Navegación entre notas
-prevEntryBtn.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    showEntry();
+// Eliminar cuenta
+deleteAccountBtn.addEventListener("click", async () => {
+  if (confirm("¿Seguro que quieres eliminar tu cuenta? Esto no se puede deshacer.")) {
+    await deleteDoc(doc(db, "userProfiles", user.uid));
+    alert("Cuenta eliminada.");
+    logout();
   }
 });
-
-nextEntryBtn.addEventListener("click", () => {
-  if (currentIndex < entriesList.length - 1) {
-    currentIndex++;
-    showEntry();
-  }
-});
-
-// Cargar notas al iniciar
-loadEntries();
