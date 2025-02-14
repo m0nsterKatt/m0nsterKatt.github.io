@@ -8,11 +8,11 @@
   </head>
   <body>
     <div class="container">
-      <!-- MENÚ LATERAL -->
+      <!-- 📌 MENÚ LATERAL -->
       <aside class="sidebar">
         <h2>📌 Menú</h2>
         <ul>
-          <li><button id="userProfileBtn">👤 Mi cuenta</button></li>
+          <li><a href="perfil.html" target="_blank" id="userProfileBtn">👤 Nombre de Usuario</a></li>
           <li><button id="viewMonthly">📆 Vista Mensual</button></li>
           <li>
             <button id="toggleNotifications">🔔 Notificaciones: <span id="notifStatus">OFF</span></button>
@@ -23,7 +23,7 @@
         </ul>
       </aside>
 
-      <!-- SECCIÓN PRINCIPAL -->
+      <!-- 📖 SECCIÓN PRINCIPAL DEL DIARIO -->
       <main class="diary-container">
         <header>
           <button id="prevEntry">⬅️</button>
@@ -31,16 +31,18 @@
           <button id="nextEntry">➡️</button>
         </header>
 
-        <!-- CAMPOS NUEVOS -->
+        <!-- ✅ MENSAJE DE CONFIRMACIÓN -->
+        <div id="saveFeedback">✔️ Entrada guardada correctamente</div>
+
+        <!-- 📝 CAMPOS DEL DIARIO -->
         <input type="date" id="entryDate" />
         <input type="text" id="entryTitle" placeholder="Escribe un título para tu entrada..." />
-
         <textarea id="diaryEntry" placeholder="Escribe tu entrada..."></textarea>
         <button id="saveEntry">💾 Guardar</button>
       </main>
     </div>
 
-    <!-- MODAL VISTA MENSUAL -->
+    <!-- 📆 MODAL - VISTA MENSUAL -->
     <div id="monthlyViewModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -48,42 +50,6 @@
         <div id="calendar"></div>
       </div>
     </div>
-
-    <!-- MODAL PARA EDITAR PERFIL -->
-    <div id="userProfileModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>👤 Información Personal</h2>
-        <form id="userProfileForm">
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" />
-
-          <label for="surname">Apellidos:</label>
-          <input type="text" id="surname" />
-
-          <label for="nickname">Apodo:</label>
-          <input type="text" id="nickname" />
-
-          <label for="birthdate">Fecha de Nacimiento:</label>
-          <input type="date" id="birthdate" />
-
-          <label for="gender">Género:</label>
-          <select id="gender">
-            <option value="M">Masculino</option>
-            <option value="F">Femenino</option>
-            <option value="NB">No Binario</option>
-          </select>
-
-          <label for="zodiac">Signo Zodiacal:</label>
-          <input type="text" id="zodiac" readonly />
-
-          <button type="submit">💾 Guardar</button>
-          <button id="deleteAccount">❌ Cerrar Cuenta</button>
-        </form>
-      </div>
-    </div>
-    <!-- ✅ Mensaje de Feedback Visual -->
-    <div id="saveFeedback">📖 Entrada guardada correctamente</div>
 
     <script type="module" src="js/diario.js"></script>
   </body>

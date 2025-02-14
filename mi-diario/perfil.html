@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles/styles_perfil.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <h2>👤 Información Personal</h2>
+
+      <!-- ✅ Mensaje de confirmación -->
+      <div id="saveFeedback">✔️ Cambios guardados correctamente</div>
+
+      <form id="userProfileForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" />
+
+        <label for="surname">Apellidos:</label>
+        <input type="text" id="surname" />
+
+        <label for="nickname">Apodo:</label>
+        <input type="text" id="nickname" />
+
+        <label for="birthdate">Fecha de Nacimiento:</label>
+        <input type="date" id="birthdate" />
+
+        <label for="gender">Género:</label>
+        <select id="gender">
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
+          <option value="NB">No Binario</option>
+        </select>
+
+        <label for="zodiac">Signo Zodiacal:</label>
+        <input type="text" id="zodiac" readonly />
+
+        <button type="submit" id="saveProfile">💾 Guardar</button>
+
+        <!-- Espaciado adicional antes del botón de eliminar -->
+        <div class="spacer"></div>
+
+        <button id="deleteAccount">❌ Eliminar Cuenta</button>
+      </form>
+    </div>
+
+    <script type="module" src="js/perfil.js"></script>
+  </body>
+</html>
