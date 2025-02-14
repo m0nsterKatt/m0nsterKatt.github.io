@@ -15,6 +15,7 @@ const userProfileForm = document.getElementById("userProfileForm");
 const saveProfileBtn = document.getElementById("saveProfile");
 const deleteAccountBtn = document.getElementById("deleteAccount");
 const saveFeedback = document.getElementById("saveFeedback");
+const userProfileBtn = document.getElementById("userProfileBtn");
 
 // Cargar perfil del usuario desde Firebase
 async function loadUserProfile() {
@@ -27,6 +28,9 @@ async function loadUserProfile() {
     document.getElementById("birthdate").value = data.birthdate || "";
     document.getElementById("gender").value = data.gender || "";
     document.getElementById("zodiac").value = data.zodiac || "";
+
+    // ✅ Actualizar el nombre en el menú lateral
+    userProfileBtn.textContent = `👤 ${data.nickname || data.name || "Usuario"}`;
   }
 }
 
@@ -50,6 +54,9 @@ userProfileForm.addEventListener("submit", async (e) => {
   setTimeout(() => {
     saveFeedback.style.display = "none";
   }, 2000);
+
+  // ✅ Actualizar el nombre en el menú lateral
+  userProfileBtn.textContent = `👤 ${profileData.nickname || profileData.name || "Usuario"}`;
 });
 
 // Obtener signo zodiacal
