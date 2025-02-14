@@ -1,0 +1,48 @@
+/* 🎨 ESTILOS GENERALES */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8c8dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 📅 CONTENEDOR DEL CALENDARIO */
+.calendar-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📆 CALENDARIO */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.calendar-day {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.calendar-day.has-entry {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.calendar-day:hover {
+  background: #ff1493;
+  color: white;
+}

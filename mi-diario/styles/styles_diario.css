@@ -36,19 +36,24 @@ body {
   padding: 0;
 }
 
+.sidebar a,
 .sidebar button {
+  display: block;
+  text-decoration: none;
   width: 100%;
   padding: 10px;
   margin: 5px 0;
-  border: none;
+  border-radius: 5px;
   background: #ff69b4;
   color: white;
-  cursor: pointer;
+  text-align: center;
   font-size: 16px;
-  border-radius: 5px;
   transition: background 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
+.sidebar a:hover,
 .sidebar button:hover {
   background: #ff1493;
 }
@@ -108,6 +113,21 @@ textarea {
   font-size: 16px;
 }
 
+/* ✅ MENSAJE DE CONFIRMACIÓN */
+#saveFeedback {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+}
+
 /* 💾 BOTÓN DE GUARDAR */
 #saveEntry {
   background: #ff69b4;
@@ -124,135 +144,12 @@ textarea {
   background: #ff1493;
 }
 
-/* 📅 MODAL - VISTA MENSUAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* 📆 CALENDARIO */
-#calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  padding: 10px;
-}
-
-.calendar-day {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.calendar-day.has-entry {
-  background-color: #ff69b4;
-  color: white;
-}
-
-.calendar-day:hover {
-  background-color: #ff1493;
-  color: white;
-}
-
-/* 👤 MODAL PERFIL DE USUARIO */
-#userProfileModal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-form input,
-form select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  margin-top: 15px;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#deleteAccount {
-  background-color: red;
-  color: white;
-}
-
-#deleteAccount:hover {
-  background-color: darkred;
-}
-
 /* 🌙 MODO OSCURO */
 .dark-mode {
   background-color: #1e1e1e;
   color: #ffffff;
 }
 
-/* Cambiar colores de los elementos en modo oscuro */
 .dark-mode .container {
   background: #2c2c2c;
 }
@@ -261,11 +158,13 @@ form button {
   background: #333;
 }
 
+.dark-mode .sidebar a,
 .dark-mode .sidebar button {
   background: #555;
   color: white;
 }
 
+.dark-mode .sidebar a:hover,
 .dark-mode .sidebar button:hover {
   background: #777;
 }
@@ -280,29 +179,4 @@ form button {
   background: #333;
   color: white;
   border: 1px solid #777;
-}
-
-/* Cambiar el color de los días en el calendario en modo oscuro */
-.dark-mode .calendar-day {
-  background: #444;
-  color: white;
-}
-
-.dark-mode .calendar-day.has-entry {
-  background: #ff69b4;
-}
-
-/* ✅ MENSAJE DE CONFIRMACIÓN */
-#saveFeedback {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #28a745;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  display: none;
-  z-index: 1000;
 }
