@@ -4,45 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="styles/styles_perfil.css" />
+    <link rel="stylesheet" href="styles/styles_diario.css" />
   </head>
   <body>
-    <div class="profile-container">
-      <h2>👤 Información Personal</h2>
+    <div class="container">
+      <!-- 📌 MENÚ LATERAL -->
+      <aside class="sidebar">
+        <h2>📌 Menú</h2>
+        <ul>
+          <li><a href="perfil.html" id="userProfileBtn">👤 Cargando...</a></li>
+          <li><a href="vista_mensual.html" id="viewMonthly">📆 Vista Mensual</a></li>
+          <li>
+            <button id="toggleNotifications">🔔 Notificaciones: <span id="notifStatus">OFF</span></button>
+          </li>
+          <li><button id="toggleTheme">🌙 Modo Oscuro</button></li>
+          <li><button id="exportEntries">📄 Exportar Notas</button></li>
+          <li><button id="logoutBtn">🚪 Cerrar Sesión</button></li>
+        </ul>
+      </aside>
 
-      <!-- ✅ Mensaje de confirmación -->
-      <div id="saveFeedback">✔️ Cambios guardados correctamente</div>
+      <!-- 📖 SECCIÓN PERFIL -->
+      <main class="profile-container">
+        <h2>👤 Información Personal</h2>
 
-      <form id="userProfileForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" />
+        <!-- ✅ MENSAJE DE CONFIRMACIÓN -->
+        <div id="saveFeedback">✔️ Cambios guardados correctamente</div>
 
-        <label for="surname">Apellidos:</label>
-        <input type="text" id="surname" />
+        <form id="userProfileForm">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" />
 
-        <label for="nickname">Apodo:</label>
-        <input type="text" id="nickname" />
+          <label for="surname">Apellidos:</label>
+          <input type="text" id="surname" />
 
-        <label for="birthdate">Fecha de Nacimiento:</label>
-        <input type="date" id="birthdate" />
+          <label for="nickname">Apodo:</label>
+          <input type="text" id="nickname" />
 
-        <label for="gender">Género:</label>
-        <select id="gender">
-          <option value="M">Masculino</option>
-          <option value="F">Femenino</option>
-          <option value="NB">No Binario</option>
-        </select>
+          <label for="birthdate">Fecha de Nacimiento:</label>
+          <input type="date" id="birthdate" />
 
-        <label for="zodiac">Signo Zodiacal:</label>
-        <input type="text" id="zodiac" readonly />
+          <label for="gender">Género:</label>
+          <select id="gender">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+            <option value="NB">No Binario</option>
+          </select>
 
-        <button type="submit" id="saveProfile">💾 Guardar</button>
+          <label for="zodiac">Signo Zodiacal:</label>
+          <input type="text" id="zodiac" readonly />
 
-        <!-- Espaciado adicional antes del botón de eliminar -->
-        <div class="spacer"></div>
+          <button type="submit" id="saveProfile">💾 Guardar</button>
 
-        <button id="deleteAccount">❌ Eliminar Cuenta</button>
-      </form>
+          <div class="spacer"></div>
+
+          <button id="deleteAccount">❌ Eliminar Cuenta</button>
+        </form>
+      </main>
     </div>
 
     <script type="module" src="js/perfil.js"></script>
