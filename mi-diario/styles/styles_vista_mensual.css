@@ -2,19 +2,87 @@
 body {
   font-family: "Arial", sans-serif;
   background-color: #f8c8dc;
+  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+}
+
+/* 🏠 CONTENEDOR PRINCIPAL */
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* 📌 MENÚ LATERAL */
+.sidebar {
+  width: 250px;
+  background: #ffe4e1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  color: #d63384;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar a,
+.sidebar button {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background: #ff69b4;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+  background: #ff1493;
 }
 
 /* 📅 CONTENEDOR DEL CALENDARIO */
 .calendar-container {
-  background: white;
+  flex: 1;
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.month-navigation button {
+  background: #ff69b4;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.month-navigation button:hover {
+  background: #ff1493;
 }
 
 /* 📆 CALENDARIO */
@@ -40,9 +108,16 @@ body {
 .calendar-day.has-entry {
   background-color: #ff69b4;
   color: white;
+  position: relative;
 }
 
-.calendar-day:hover {
-  background: #ff1493;
-  color: white;
+.entry-count {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: 12px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 5px;
 }
