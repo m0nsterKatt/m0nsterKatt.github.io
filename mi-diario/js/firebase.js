@@ -6,8 +6,9 @@ import {
   signInWithPopup,
   signOut,
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
 
-// Configuración de Firebase (Usa tus datos reales)
+// Configuración de Firebase (Reemplaza con tus datos)
 const firebaseConfig = {
   apiKey: "AIzaSyDSZZvxh9k6AAtMw8AgjXO04zac21orbbM",
   authDomain: "diario-bd979.firebaseapp.com",
@@ -21,25 +22,28 @@ const firebaseConfig = {
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
-// Funciones para autenticación
-export const loginWithGoogle = async () => {
+// Función para iniciar sesión con Google
+export async function login() {
   try {
     const result = await signInWithPopup(auth, provider);
-    return result.user;
+    const user = result.user;
+    localStorage.setItem("user", JSON.stringify(user));
+    window.location.href = "diario.html"; // Redirigir al diario
   } catch (error) {
     console.error("Error al iniciar sesión:", error);
   }
-};
+}
 
-export const logout = async () => {
-  try {
-    await signOut(auth);
-  } catch (error) {
-    console.error("Error al cerrar sesión:", error);
-  }
-};
+// Función para cerrar sesión
+export async function logout() {
+  await signOut(auth);
+  localStorage.removeItem("user");
+  localStorage.removeItem("displayName");
+  window.location.href = "index.html";
+}
 
-// Exportar auth para usarlo en script.js
-export { auth };
+// Exportar módulos
+export { auth, db };

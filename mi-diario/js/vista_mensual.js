@@ -25,10 +25,17 @@ let currentYear = new Date().getFullYear();
 
 // Función para actualizar el nombre del usuario en el menú lateral
 async function loadUserName() {
+  if (!userProfileBtn) return; // Evitar errores si el elemento no existe
+
+  const storedDisplayName = localStorage.getItem("displayName") || "Usuario";
+  userProfileBtn.textContent = `👤 ${storedDisplayName}`;
+
   const userDoc = await getDoc(doc(db, "userProfiles", user.uid));
   if (userDoc.exists()) {
     const data = userDoc.data();
-    userProfileBtn.textContent = `👤 ${data.nickname || data.name || "Usuario"}`;
+    const displayName = data.nickname?.trim() || data.name?.trim() || "Usuario";
+    userProfileBtn.textContent = `👤 ${displayName}`;
+    localStorage.setItem("displayName", displayName); // Guardar en localStorage
   }
 }
 
@@ -59,8 +66,12 @@ async function generateCalendar() {
   const firstDay = new Date(currentYear, currentMonth, 1);
   const lastDay = new Date(currentYear, currentMonth + 1, 0);
 
-  // Obtener entradas del usuario en el mes actual
+  // Consulta a Firebase SOLO con fechas del mes actual
+  const startDate = new Date(currentYear, currentMonth, 1);
+  const endDate = new Date(currentYear, currentMonth + 1, 0);
+
   const q = query(collection(db, "diaryEntries"), where("userId", "==", user.uid));
+
   const snapshot = await getDocs(q);
 
   const entriesByDate = {};
