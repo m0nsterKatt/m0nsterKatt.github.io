@@ -1,26 +1,121 @@
 /* 🎨 ESTILOS GENERALES */
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Arial", sans-serif;
+}
+
+body {
   background-color: #f8c8dc;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
-/* 📦 CONTENEDOR DEL PERFIL */
-.profile-container {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* 🏠 CONTENEDOR PRINCIPAL */
+.container {
+  display: flex;
+  width: 100%;
 }
 
-h2 {
+/* 📌 MENÚ LATERAL */
+.sidebar {
+  width: 250px;
+  background: #ffe4e1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
   color: #d63384;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar a,
+.sidebar button {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  background: #ff69b4;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+  background: #ff1493;
+}
+
+/* 👤 PERFIL */
+.profile-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container h2 {
+  font-size: 24px;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+/* 📝 FORMULARIO DE PERFIL */
+#userProfileForm {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#userProfileForm label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#userProfileForm input,
+#userProfileForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 💾 BOTÓN DE GUARDAR */
+#saveProfile {
+  background: #ff69b4;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+#saveProfile:hover {
+  background: #ff1493;
 }
 
 /* ✅ MENSAJE DE CONFIRMACIÓN */
@@ -28,64 +123,53 @@ h2 {
   background: #28a745;
   color: white;
   padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-bottom: 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
   display: none;
 }
 
-/* 📝 FORMULARIO */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-form input,
-form select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* 💾 BOTÓN DE GUARDAR */
-#saveProfile {
-  margin-top: 15px;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  background: #ff69b4;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-#saveProfile:hover {
-  background: #ff1493;
-}
-
-/* 📏 SEPARADOR PARA EL BOTÓN DE ELIMINAR */
-.spacer {
-  height: 30px;
-}
-
-/* ❌ BOTÓN DE ELIMINAR */
+/* ❌ BOTÓN ELIMINAR CUENTA */
 #deleteAccount {
-  background-color: red;
+  background: #dc3545;
   color: white;
-  padding: 10px;
+  padding: 10px 15px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 20px;
+  transition: background 0.3s ease;
 }
 
 #deleteAccount:hover {
-  background-color: darkred;
+  background: #c82333;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar li {
+    margin: 5px;
+  }
+
+  #userProfileForm {
+    max-width: 100%;
+  }
 }

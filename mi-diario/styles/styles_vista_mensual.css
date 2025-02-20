@@ -1,8 +1,13 @@
 /* 🎨 ESTILOS GENERALES */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f8c8dc;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f8c8dc;
   display: flex;
   height: 100vh;
 }
@@ -25,6 +30,7 @@ body {
 .sidebar h2 {
   color: #d63384;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .sidebar ul {
@@ -37,16 +43,16 @@ body {
   display: block;
   text-decoration: none;
   width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 8px;
   background: #ff69b4;
   color: white;
   text-align: center;
   font-size: 16px;
-  transition: background 0.3s;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .sidebar a:hover,
@@ -54,21 +60,25 @@ body {
   background: #ff1493;
 }
 
-/* 📅 CONTENEDOR DEL CALENDARIO */
+/* 📆 CONTENEDOR DEL CALENDARIO */
 .calendar-container {
   flex: 1;
+  text-align: center;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
+.calendar-container h2 {
+  font-size: 24px;
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+/* 🔄 BOTONES DE NAVEGACIÓN DEL MES */
 .month-navigation {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   max-width: 500px;
-  margin-bottom: 10px;
+  margin: 0 auto 15px;
 }
 
 .month-navigation button {
@@ -78,7 +88,8 @@ body {
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
 .month-navigation button:hover {
@@ -93,6 +104,7 @@ body {
   padding: 10px;
 }
 
+/* 📅 CADA DÍA DEL CALENDARIO */
 .calendar-day {
   width: 50px;
   height: 50px;
@@ -100,11 +112,13 @@ body {
   align-items: center;
   justify-content: center;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
+  transition: background 0.3s ease;
 }
 
+/* 📖 DÍAS CON ENTRADAS */
 .calendar-day.has-entry {
   background-color: #ff69b4;
   color: white;
@@ -120,4 +134,26 @@ body {
   color: black;
   border-radius: 50%;
   padding: 2px 5px;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar li {
+    margin: 5px;
+  }
 }

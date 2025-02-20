@@ -1,12 +1,13 @@
 /* 🎨 ESTILOS GENERALES */
 * {
-  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
 
 body {
-  font-family: "Arial", sans-serif;
   background-color: #f8c8dc;
-  margin: 0;
   display: flex;
   height: 100vh;
 }
@@ -29,6 +30,7 @@ body {
 .sidebar h2 {
   color: #d63384;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .sidebar ul {
@@ -41,16 +43,16 @@ body {
   display: block;
   text-decoration: none;
   width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 8px;
   background: #ff69b4;
   color: white;
   text-align: center;
   font-size: 16px;
-  transition: background 0.3s;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .sidebar a:hover,
@@ -75,9 +77,10 @@ header {
   width: 100%;
   max-width: 600px;
   background: white;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: 8px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 header button {
@@ -85,45 +88,38 @@ header button {
   border: none;
   font-size: 24px;
   cursor: pointer;
-}
-
-header span {
-  font-size: 18px;
-  font-weight: bold;
+  color: #ff1493;
 }
 
 /* 📅 CAMPOS PARA LA ENTRADA */
 input[type="date"],
-input[type="text"] {
+input[type="text"],
+textarea {
   width: 100%;
   max-width: 600px;
   padding: 10px;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 /* ✍️ ÁREA DE TEXTO */
 textarea {
-  width: 100%;
-  max-width: 600px;
-  height: 250px;
-  padding: 10px;
-  font-size: 16px;
+  height: 200px;
 }
 
 /* ✅ MENSAJE DE CONFIRMACIÓN */
 #saveFeedback {
   position: fixed;
-  top: 10px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   background: #28a745;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 8px;
   display: none;
   z-index: 1000;
 }
@@ -136,47 +132,68 @@ textarea {
   font-size: 16px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
 #saveEntry:hover {
   background: #ff1493;
 }
 
-/* 🌙 MODO OSCURO */
-.dark-mode {
-  background-color: #1e1e1e;
-  color: #ffffff;
+/* 📆 VISTA MENSUAL */
+.calendar-container {
+  text-align: center;
+  padding: 20px;
 }
 
-.dark-mode .container {
-  background: #2c2c2c;
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
 }
 
-.dark-mode .sidebar {
-  background: #333;
+.calendar-day {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
-.dark-mode .sidebar a,
-.dark-mode .sidebar button {
-  background: #555;
+.calendar-day.has-entry {
+  background-color: #ff69b4;
   color: white;
 }
 
-.dark-mode .sidebar a:hover,
-.dark-mode .sidebar button:hover {
-  background: #777;
-}
-
-.dark-mode header {
-  background: #444;
-}
-
-.dark-mode textarea,
-.dark-mode input,
-.dark-mode select {
-  background: #333;
+.calendar-day:hover {
+  background: #ff1493;
   color: white;
-  border: 1px solid #777;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar li {
+    margin: 5px;
+  }
 }
